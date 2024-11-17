@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перевірка числівників</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Пошук числівників у тексті</h1>
+        <form method="POST" class="form">
+            <div class="input-group">
+                <label for="textInput">Введіть текст:</label>
+                <textarea id="textInput" name="text" rows="5" placeholder="Введіть текст для пошуку..." 
+                          style="resize: none;">{{ request.form['text'] if request.method == 'POST' else '' }}</textarea>
+            </div>
+
+            <div class="submit-group">
+                <button type="submit" class="btn" id="submitBtn">Шукати</button>
+            </div>
+
+            {% if error_message %}
+                <div class="error-message">
+                    <p>{{ error_message }}</p>
+                </div>
+            {% endif %}
+
+            {% if numerals %}
+                <div class="result-group">
+                    <label for="result">Знайдені числівники:</label>
+                    <textarea id="result" rows="5" readonly style="resize: none;">{{ numerals | join(', ') }}</textarea>
+                </div>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>

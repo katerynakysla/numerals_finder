@@ -1,0 +1,100 @@
+/* Підключення шрифту Comfortaa */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&display=swap');
+
+/* Загальні стилі для тіла */
+body {
+    font-family: 'Comfortaa', cursive; /* Використовуємо Comfortaa */
+    background-color: #f0f8ff; /* Пастельний блакитний фон */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Контейнер для форми */
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Секція для текстових полів */
+.input-group, .result-group {
+    margin-bottom: 20px;
+}
+
+/* Текстове поле вводу */
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-family: 'Comfortaa', cursive; /* Використовуємо Comfortaa для тексту */
+    box-sizing: border-box; /* Враховуємо padding в ширині */
+}
+
+/* Псевдоклас для фокусу на текстових полях */
+textarea:focus {
+    border-color: #ff8ba0;
+    outline: none;
+}
+
+/* Кнопка */
+.btn {
+    background-color: #ffb6c1; /* Світло-рожевий фон */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Кнопка не розтягується на всю ширину */
+    font-family: 'Comfortaa', cursive; /* Використовуємо Comfortaa для кнопки */
+    margin: 0 auto; /* Центрування кнопки */
+    display: block;
+}
+
+.btn:hover {
+    background-color: #ff8ba0; /* Трохи темніший рожевий при наведенні */
+}
+
+/* Повідомлення про помилку */
+.error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Результати пошуку */
+.result-group {
+    margin-top: 20px;
+}
+
+/* Спільні стилі для всіх текстових полів (вхідного та результату) */
+textarea {
+    resize: vertical; /* Дозволяє змінювати висоту */
+}
+
+/* Вирівнювання лейблів */
+label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
